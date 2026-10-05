@@ -1,0 +1,258 @@
+/* =========================================================================
+   COACH & CONSULTANT BOOKING TEMPLATE
+   Palette: ink / paper / brass / sage — a "session ledger" aesthetic
+   ========================================================================= */
+
+:root {
+    --ink: #1B2420;
+    --ink-soft: #445048;
+    --paper: #EEF0ED;
+    --paper-raised: #F8F9F7;
+    --brass: #B08A46;
+    --brass-hover: #96702F;
+    --sage: #5F7A63;
+    --sage-soft: #E5EBE3;
+    --line: #D8DBD5;
+    --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, .brand, .ledger-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 0;
+}
+
+.mono, .ledger-day, .ledger-time { font-family: 'IBM Plex Mono', monospace; }
+
+.wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+a { color: inherit; }
+
+/* --- Header --- */
+.site-header {
+    position: sticky;
+    top: 0;
+    background: rgba(238, 240, 237, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    z-index: 10;
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 76px;
+}
+
+.brand { font-size: 1.25rem; }
+
+.nav { display: flex; gap: 2rem; }
+.nav a {
+    text-decoration: none;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    transition: color 0.2s ease;
+}
+.nav a:hover { color: var(--ink); }
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0.85rem 1.6rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.btn-brass { background: var(--brass); color: #FFFDF9; }
+.btn-brass:hover { background: var(--brass-hover); }
+.btn-brass:active { transform: scale(0.98); }
+.btn:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
+.btn-small { padding: 0.6rem 1.25rem; font-size: 0.9rem; }
+.btn-wide { display: block; text-align: center; width: 100%; }
+
+/* --- Hero --- */
+.hero { padding: 5rem 0 4rem; }
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 3.5rem;
+    align-items: center;
+}
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--sage);
+    margin-bottom: 0.75rem;
+}
+.eyebrow.center, h2.center { text-align: center; }
+h1 { font-size: clamp(2.1rem, 4vw, 3rem); line-height: 1.15; margin-bottom: 1.25rem; }
+.hero-sub { color: var(--ink-soft); font-size: 1.05rem; margin-bottom: 2rem; max-width: 46ch; }
+
+/* Signature element: the ledger */
+.ledger {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    box-shadow: 0 12px 32px rgba(27, 36, 32, 0.06);
+}
+.ledger-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.85rem;
+    margin-bottom: 1rem;
+}
+.ledger-title { font-size: 1.05rem; }
+.ledger-sub { font-size: 0.8rem; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.06em; }
+.ledger-strip { display: flex; flex-direction: column; gap: 0.5rem; }
+.ledger-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.65rem 0.85rem;
+    border-radius: 8px;
+    background: var(--paper);
+}
+.ledger-row.is-open { background: var(--sage-soft); }
+.ledger-day { font-size: 0.85rem; color: var(--ink-soft); }
+.ledger-time { font-size: 0.9rem; font-weight: 500; }
+.ledger-status {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    color: var(--sage);
+}
+.ledger-note { font-size: 0.8rem; color: var(--ink-soft); margin: 1rem 0 0; }
+
+/* --- Trust strip --- */
+.trust-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 1.5rem 0; }
+.trust-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* --- About --- */
+.about { padding: 5rem 0; }
+.about-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 3rem; align-items: center; }
+.about-photo {
+    aspect-ratio: 4 / 5;
+    background: var(--sage-soft);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.about-photo.has-photo { background: var(--paper-raised); }
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.photo-label { color: var(--sage); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.about-copy h2 { margin-bottom: 1rem; font-size: 1.9rem; }
+.about-copy p { color: var(--ink-soft); }
+.about-facts { list-style: none; padding: 0; margin: 1.5rem 0 0; display: flex; flex-direction: column; gap: 0.6rem; }
+.about-facts li {
+    padding-left: 1.4rem;
+    position: relative;
+    font-size: 0.95rem;
+}
+.about-facts li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--brass);
+}
+
+/* --- Services --- */
+.services { padding: 5rem 0; background: var(--paper-raised); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.services h2 { margin: 0.5rem 0 3rem; font-size: 1.9rem; }
+.service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.service-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+}
+.service-card.is-featured { border-color: var(--brass); }
+.service-name { font-family: 'Fraunces', serif; font-size: 1.2rem; margin: 0 0 0.5rem; }
+.service-price { font-family: 'IBM Plex Mono', monospace; color: var(--brass); font-weight: 500; margin-bottom: 0.85rem; }
+.service-desc { color: var(--ink-soft); font-size: 0.92rem; flex-grow: 1; margin-bottom: 1.25rem; }
+
+/* --- Testimonials --- */
+.testimonials { padding: 5rem 0; }
+.testimonials h2 { margin: 0.5rem 0 3rem; font-size: 1.9rem; }
+.testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.testimonial-card {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+}
+.testimonial-quote { font-size: 0.98rem; margin: 0 0 1rem; }
+.testimonial-name { font-size: 0.85rem; color: var(--sage); font-weight: 600; }
+
+/* --- Booking --- */
+.booking { padding: 5rem 0 6rem; }
+.booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.booking-card {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 2rem;
+    text-align: center;
+}
+.booking-note { color: var(--ink-soft); font-size: 0.9rem; margin: 0.5rem 0 1.5rem; }
+
+/* --- Footer --- */
+.site-footer { border-top: 1px solid var(--line); padding: 2rem 0; }
+.footer-row { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--ink-soft); }
+.footer-muted { color: var(--ink-soft); }
+
+/* --- Scroll reveal --- */
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* --- Responsive --- */
+@media (max-width: 860px) {
+    .hero-grid, .about-grid, .booking-grid { grid-template-columns: 1fr; }
+    .about-photo { max-width: 320px; }
+    .service-grid, .testimonial-grid { grid-template-columns: 1fr; }
+    .nav { display: none; }
+}

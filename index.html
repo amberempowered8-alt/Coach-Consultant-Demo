@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coaching & Consulting — Book a Session</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <span class="brand" id="brand-name">Coach Name</span>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#services">Sessions</a>
+      <a href="#testimonials">Results</a>
+    </nav>
+    <a href="#booking" class="btn btn-brass btn-small">Book a Session</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO: The Session Ledger -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">1:1 Coaching &amp; Consulting</p>
+        <h1>Your next breakthrough starts with one session.</h1>
+        <p class="hero-sub" id="hero-subtext">I help driven people get unstuck and move forward with clarity — no fluff, just a plan that works.</p>
+        <a href="#booking" class="btn btn-brass">Reserve Your Session</a>
+      </div>
+
+      <div class="ledger" aria-label="This week's available sessions">
+        <div class="ledger-head">
+          <span class="ledger-title">This Week</span>
+          <span class="ledger-sub">Open Slots</span>
+        </div>
+        <div class="ledger-strip" id="ledger-strip">
+          <!-- populated by app.js from CONFIG.availability -->
+        </div>
+        <p class="ledger-note">Full calendar and more times shown after you book.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="trust-strip">
+    <div class="wrap trust-row" id="trust-row">
+      <!-- populated by app.js from CONFIG.credentials -->
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="wrap about-grid">
+      <div class="about-photo" id="about-photo">
+        <span class="photo-label">Your Photo</span>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">About Your Coach</p>
+        <h2 id="about-heading">A little about how I work</h2>
+        <p id="about-body">Replace this with your own story — what led you here, who you help, and why your approach gets results. Two or three honest sentences work better than a long bio.</p>
+        <ul class="about-facts" id="about-facts">
+          <!-- populated by app.js from CONFIG.aboutFacts -->
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <div class="wrap">
+      <p class="eyebrow center">Ways to Work Together</p>
+      <h2 class="center">Pick what fits where you're at</h2>
+      <div class="service-grid" id="service-grid">
+        <!-- populated by app.js from CONFIG.services -->
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="testimonials">
+    <div class="wrap">
+      <p class="eyebrow center">Real Results</p>
+      <h2 class="center">What it's like to work together</h2>
+      <div class="testimonial-grid" id="testimonial-grid">
+        <!-- populated by app.js from CONFIG.testimonials -->
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="booking" class="booking">
+    <div class="wrap booking-grid">
+      <div>
+        <p class="eyebrow">Ready When You Are</p>
+        <h2>Let's find your time.</h2>
+        <p class="hero-sub">Sessions fill up — the calendar below shows what's actually open right now.</p>
+      </div>
+      <div class="booking-card">
+        <p class="ledger-title">Book Your Session</p>
+        <p class="booking-note">Clicking below opens your live booking calendar.</p>
+        <!-- CLIENT ACTION REQUIRED: replace # with your Calendly / Cal.com / booking link -->
+        <a href="#" id="booking-link" class="btn btn-brass btn-wide">Open Booking Calendar</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <span id="footer-name">Coach Name</span>
+    <span class="footer-muted">Sessions held virtually &amp; in-person</span>
+    <a class="footer-muted" href="accessibility.html">Accessibility</a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
