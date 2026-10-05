@@ -10,12 +10,9 @@ name: Sync services & testimonials from Airtable
 # You can also trigger it manually from the Actions tab (see the GitHub
 # Actions Quick-Start SOP for exactly how).
 
+# DEMO SITE: automatic runs turned off so the sample data stays put.
 on:
-  schedule:
-    - cron: "*/30 * * * *"
   workflow_dispatch: {}
-  push:
-    branches: [main]
 
 permissions:
   contents: write

@@ -9,40 +9,37 @@
 // =========================================================================
 
 const CONFIG = {
-    coachName: "Coach Name",
+    coachName: "Clear Harbor Coaching",
 
-    heroHeadline: "Your next breakthrough starts with one session.",
-    heroSubtext: "I help driven people get unstuck and move forward with clarity — no fluff, just a plan that works.",
+    heroHeadline: "Ready for your next career move? Let's make it on purpose.",
+    heroSubtext: "Career transition coaching for mid-career professionals who know it's time for a change but aren't sure what's next. Straight talk, a real plan, and support while you take the leap.",
 
-    // CLIENT ACTION REQUIRED: replace with your real Calendly / Cal.com link
-    bookingLink: "https://www.booking-link.com",
+    // DEMO: the booking button points to the template's sales page
+    bookingLink: "https://payhip.com/b/184kI",
 
-    // Optional: paste a photo URL here (or, if you uploaded a photo file into
-    // this repo, just put its file name, e.g. "photo.jpg"). Leave this as ""
-    // to keep the placeholder box shown in the About section.
     photoUrl: "",
 
     // Shown in the "This Week" ledger on the hero. Keep it short — 4-6 rows reads best.
     availability: [
-        { day: "Mon", time: "10:00 AM", status: "Open" },
-        { day: "Mon", time: "2:00 PM", status: "Booked" },
-        { day: "Wed", time: "11:00 AM", status: "Open" },
-        { day: "Thu", time: "9:00 AM", status: "Open" },
-        { day: "Fri", time: "1:00 PM", status: "Booked" }
+        { day: "Mon", time: "9:30 AM", status: "Open" },
+        { day: "Tue", time: "12:00 PM", status: "Booked" },
+        { day: "Wed", time: "4:00 PM", status: "Open" },
+        { day: "Thu", time: "10:00 AM", status: "Booked" },
+        { day: "Fri", time: "1:30 PM", status: "Open" }
     ],
 
     credentials: [
-        "10+ Years Experience",
-        "200+ Clients Coached",
-        "Certified Practitioner"
+        "12 Years in HR & Hiring",
+        "300+ Career Changes Coached",
+        "Certified Career Coach"
     ],
 
-    aboutHeading: "A little about how I work",
-    aboutBody: "Replace this with your own story — what led you here, who you help, and why your approach gets results. Two or three honest sentences work better than a long bio.",
+    aboutHeading: "Hi, I'm Marisol.",
+    aboutBody: "I spent twelve years on the hiring side of the table, reading résumés and sitting in on the decisions. Then I made my own career change and saw how lonely and confusing it can feel. Now I help professionals figure out what they actually want next, tell their story with confidence, and land a role that fits the life they're building.",
     aboutFacts: [
-        "Sessions held virtually or in-person",
-        "Personalized plan after your first call",
-        "No long-term contracts required"
+        "Sessions held over video, so you can join from anywhere",
+        "A written game plan after your first session",
+        "No long-term contracts, ever"
     ],
 
     // Services and Testimonials are no longer edited here — they're synced
